@@ -9,8 +9,8 @@ class PeculiaritiesAdapter : RecyclerView.Adapter<PeculiaritiesAdapter.ViewHolde
 
     private var list: ArrayList<String> = ArrayList()
 
-    fun setList(list: List<String>) {
-        this.list.addAll(list)
+    fun setList(list: ArrayList<String>) {
+        this.list = list
         notifyDataSetChanged()
     }
 

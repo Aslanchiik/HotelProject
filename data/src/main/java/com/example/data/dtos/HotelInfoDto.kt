@@ -8,7 +8,7 @@ data class HotelInfoDto(
     @SerializedName("description")
     val description: String,
     @SerializedName("peculiarities")
-    val peculiarities: List<String>
+    val peculiarities: ArrayList<String>
 ) : DataMapper<HotelInfo> {
     override fun mapToDomain() = HotelInfo(
         description, peculiarities

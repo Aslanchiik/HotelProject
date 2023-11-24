@@ -43,7 +43,7 @@
 
     <style name="BaseMaterialCardView" parent="Widget.MaterialComponents.CardView">
         <item name="cardCornerRadius">12dp</item>
-        <item name="backgroundTint">@color/white</item>
+        <item name="android:backgroundTint">@color/white</item>
         <item name="android:layout_marginTop">@dimen/standard_dp</item>
     </style>
 

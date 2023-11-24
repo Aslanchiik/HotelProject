@@ -26,7 +26,7 @@ class RoomAdapter(private val onItemClick: (Int) -> Unit) :
             binding.itemDropRecView.adapter = peculiaritiesAdapter
             binding.itemCollageRecView.adapter = collageAdapter
             itemDropDescription.text = item?.name
-            item?.peculiarities?.let { peculiaritiesAdapter.setList(it) }
+            item?.peculiarities?.let { peculiaritiesAdapter.setList(it as ArrayList<String>) }
             collageAdapter.submitList(item?.imageUrls)
 
         }

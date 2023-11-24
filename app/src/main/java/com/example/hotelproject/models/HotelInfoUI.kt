@@ -4,7 +4,7 @@ import com.example.domain.models.HotelInfo
 
 data class HotelInfoUI(
     val description: String,
-    val peculiarities: List<String>
+    val peculiarities: ArrayList<String>
 )
 
 fun HotelInfo.toUI() = HotelInfoUI(
