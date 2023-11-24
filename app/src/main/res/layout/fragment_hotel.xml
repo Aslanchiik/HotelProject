@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E9EC"
+    android:fillViewport="true"
+    tools:context=".presentation.ui.fragments.hotel.HotelFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/general_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout style="@style/BaseLinearLayout">
+
+                <TextView
+                    android:id="@+id/hotel_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/sf_pro_dsiply"
+                    android:text="Отель"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_of_images"
+                    style="@style/BaseMaterialCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/collage_image_recView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rating_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_dp"
+                    android:backgroundTint="#f2e0ac"
+                    android:textColor="#FFA800"
+                    app:cornerRadius="5dp"
+                    app:icon="@drawable/star_22"
+                    app:iconTint="#FFA800" />
+
+                <TextView
+                    android:id="@+id/name_of_hotel_txt"
+                    style="@style/BaseTextName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/location_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_dp"
+                    android:fontFamily="@font/sf_pro_dsiply"
+                    android:textColor="#0D72FF"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/price_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_dp"
+                    android:fontFamily="@font/sf_pro_dsiply"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/with_tour_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_dsiply"
+                    android:paddingBottom="10dp"
+                    android:textColor="#828796"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/BaseMaterialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/particular_recView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/descriptiob_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sf_pro_dsiply"
+                    android:textSize="@dimen/_16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/particular_recView" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/services_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_dp"
+                    android:layout_marginEnd="@dimen/_16sp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="#FBFBFC"
+                    app:cardCornerRadius="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/descriptiob_txt">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/emoji_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/emoji_happy"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/conveniences_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sf_pro_dsiply"
+                            android:text="Удобства"
+                            android:textSize="@dimen/_16sp"
+                            app:layout_constraintLeft_toRightOf="@+id/emoji_img"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/need_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Самое необходимое"
+                            android:textColor="#828796"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toRightOf="@+id/emoji_img"
+                            app:layout_constraintTop_toBottomOf="@+id/conveniences_txt" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/exit"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/emoji_img" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:background="#b3b1ab"
+                            app:layout_constraintLeft_toLeftOf="@+id/conveniences_txt"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/need_txt" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/tick_square"
+                            app:layout_constraintStart_toStartOf="@id/emoji_img"
+                            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+                        <TextView
+                            android:id="@+id/turn_on_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sf_pro_dsiply"
+                            android:text="Что включено"
+                            android:textSize="@dimen/_16sp"
+                            app:layout_constraintLeft_toRightOf="@+id/emoji_img"
+                            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+                        <TextView
+                            android:id="@+id/need_txt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Самое необходдимое"
+                            android:textColor="#828796"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/emoji_img"
+                            app:layout_constraintTop_toBottomOf="@+id/turn_on_txt" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/exit"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/turn_on_txt" />
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="#b3b1ab"
+                            android:paddingBottom="15dp"
+                            app:layout_constraintLeft_toLeftOf="@+id/conveniences_txt"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/need_txt2" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/close_square"
+                            app:layout_constraintStart_toStartOf="@id/emoji_img"
+                            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                        <TextView
+                            android:id="@+id/turn_off_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sf_pro_dsiply"
+                            android:text="Что не включено"
+                            android:textSize="@dimen/_16sp"
+                            app:layout_constraintLeft_toRightOf="@+id/emoji_img"
+                            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                        <TextView
+                            android:id="@+id/need_txt3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Самое необходдимое"
+                            android:textColor="#828796"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/emoji_img"
+                            app:layout_constraintTop_toBottomOf="@+id/turn_off_txt" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/exit"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/turn_off_txt" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/standard_dp"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/services_card" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/next_btn"
+                style="@style/BaseMaterialButton"
+                android:layout_width="match_parent"
+                android:text="К выбору номера"
+                app:cornerRadius="@dimen/_15dp"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

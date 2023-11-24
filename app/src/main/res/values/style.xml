@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColorHint">#A9ABB7</item>
+        <item name="android:layout_marginTop">@dimen/standard_dp</item>
+        <item name="boxBackgroundColor">#F6F6F9</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="hintTextAppearance">@style/BaseHintTextAppearance</item>
+        <item name="hintTextColor">#A9ABB7</item>
+    </style>
+
+    <style name="BaseHintTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/sf_pro_dsiply</item>
+    </style>
+
+    <style name="BaseInputEdit">
+        <item name="fontFamily">@font/sf_pro_dsiply</item>
+        <item name="android:textColor">#14142B</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+    </style>
+
+    <style name="BaseInsideTextView" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/insideTextColor</item>
+        <item name="android:layout_marginTop">@dimen/standard_dp</item>
+        <item name="fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+    </style>
+
+    <style name="GeneralTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:layout_marginTop">@dimen/standard_dp</item>
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+    <style name="BaseMaterialCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:layout_marginTop">@dimen/standard_dp</item>
+    </style>
+
+    <style name="BaseLinearLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginHorizontal">@dimen/_16dp</item>
+        <!-- Add other styling attributes as needed -->
+    </style>
+
+    <style name="BaseTextName" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_marginTop">@dimen/standard_dp</item>
+
+    </style>
+
+    <style name="BaseMaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="backgroundTint">@color/blue_color</item>
+        <item name="android:padding">@dimen/_16dp</item>
+        <item name="fontFamily">@font/sf_pro_display_medium</item>
+        <item name="android:layout_marginHorizontal">@dimen/_16dp</item>
+        <item name="android:layout_marginTop">@dimen/standard_dp</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+</resources>

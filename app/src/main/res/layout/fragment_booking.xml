@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E9EC"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".presentation.ui.fragments.booking.BookingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/arrow_back_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:text="Бронирование"
+                android:textSize="18sp" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/BaseMaterialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout style="@style/BaseLinearLayout">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rating_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_dp"
+                    android:backgroundTint="#f2e0ac"
+                    android:fontFamily="@font/sf_pro_display_medium"
+                    android:textColor="#FFA800"
+                    app:cornerRadius="5dp"
+                    app:icon="@drawable/star_22"
+                    app:iconTint="#FFA800" />
+
+                <TextView
+                    android:id="@+id/name_txt"
+                    style="@style/BaseTextName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/hotel_address_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_dp"
+                    android:fontFamily="@font/sf_pro_dsiply"
+                    android:paddingBottom="10dp"
+                    android:textColor="#0D72FF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/BaseMaterialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/BaseLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/first_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_dsiply"
+                        android:text="Вылет из"
+                        android:textColor="@color/insideTextColor"
+                        android:textSize="@dimen/_16sp" />
+
+                    <TextView
+                        style="@style/BaseInsideTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Страна, город" />
+
+                    <TextView
+                        style="@style/BaseInsideTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Даты" />
+
+                    <TextView
+                        style="@style/BaseInsideTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Кол-во ночей" />
+
+                    <TextView
+                        style="@style/BaseInsideTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Отель" />
+
+                    <TextView
+                        style="@style/BaseInsideTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Номер" />
+
+                    <TextView
+                        style="@style/BaseInsideTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Питание" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toRightOf="@+id/first_linear"
+                    app:layout_constraintTop_toTopOf="@id/first_linear">
+
+                    <TextView
+                        android:id="@+id/departure_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:fontFamily="@font/sf_pro_dsiply"
+                        android:textSize="@dimen/_16sp"
+                        tools:text="Санкт-Петербург" />
+
+                    <TextView
+                        android:id="@+id/arrival_country_txt"
+                        style="@style/GeneralTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tour_date_start_txt"
+                        style="@style/GeneralTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/number_of_nights_txt"
+                        style="@style/GeneralTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/GeneralTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Steigenberger Makadi" />
+
+                    <TextView
+                        android:id="@+id/room_txt"
+                        style="@style/GeneralTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/nutrition_txt"
+                        style="@style/GeneralTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/standard_dp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/BaseMaterialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                style="@style/BaseLinearLayout"
+                android:layout_marginTop="@dimen/standard_dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_dsiply"
+                    android:text="Информация о покупателе"
+                    android:textSize="22sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayout_phoneNumber"
+                    style="@style/BaseInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Номер телефона">
+
+                    <com.example.hotelproject.presentation.ui.customviews.InputEditPhoneNumber
+                        android:id="@+id/inputEdit_phoneNumber"
+                        style="@style/BaseInputEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textCursorDrawable="@null" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputLayout_gmail"
+                    style="@style/BaseInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Почта">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputEdit_gmail"
+                        style="@style/BaseInputEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:textCursorDrawable="@null" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:text="Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту"
+                    android:textColor="@color/insideTextColor"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/tourist_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.hotelproject.presentation.ui.customviews.EnhancedTouristInfoView
+                android:id="@+id/tourist_fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_add_tourist"
+            style="@style/BaseMaterialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/BaseLinearLayout"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txt_add_tourist"
+                    style="@style/BaseTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить туриста"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_add_tourist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/plus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/BaseMaterialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/last_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Тур"
+                        android:textColor="@color/insideTextColor"
+                        android:textSize="@dimen/_16sp" />
+
+                    <TextView
+                        style="@style/BaseInsideTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Топливный сбор" />
+
+                    <TextView
+                        style="@style/BaseInsideTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Сервисный сбор" />
+
+                    <TextView
+                        style="@style/BaseInsideTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="К оплате" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/last_linear">
+
+                    <TextView
+                        android:id="@+id/tour_price_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:fontFamily="@font/sf_pro_dsiply"
+                        android:textSize="@dimen/_16sp" />
+
+                    <TextView
+                        android:id="@+id/fluer_price_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="@dimen/standard_dp"
+                        android:fontFamily="@font/sf_pro_dsiply"
+                        android:textSize="@dimen/_16sp" />
+
+                    <TextView
+                        android:id="@+id/service_price_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="@dimen/standard_dp"
+                        android:fontFamily="@font/sf_pro_dsiply"
+                        android:textSize="@dimen/_16sp" />
+
+                    <TextView
+                        android:id="@+id/general_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="@dimen/standard_dp"
+                        android:fontFamily="@font/sf_pro_dsiply"
+                        android:paddingBottom="@dimen/standard_dp"
+                        android:text="198 036 ₽"
+                        android:textColor="#0D72FF"
+                        android:textSize="@dimen/_16sp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/paid_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sp"
+                android:layout_marginTop="@dimen/standard_dp"
+                android:backgroundTint="#0D72FF"
+                android:padding="@dimen/_16dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sp"
+                app:cornerRadius="15dp" />
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

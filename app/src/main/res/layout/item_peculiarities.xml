@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.button.MaterialButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_peculiar_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:backgroundTint="#EEEEF4"
+    android:fontFamily="@font/sf_pro_dsiply"
+    android:gravity="left"
+    android:text="3 line"
+    android:textColor="#828796"
+    android:textSize="@dimen/_16sp"
+    app:cornerRadius="5dp">
+
+</com.google.android.material.button.MaterialButton>
